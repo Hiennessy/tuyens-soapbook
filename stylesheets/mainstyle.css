@@ -1,0 +1,123 @@
+/* ***************************************************************************** */
+/* This is the document body - it is set up to be a grid parent or container     */
+/* All divs within the body are grid children or items                           */
+/* ***************************************************************************** */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 800px;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(3, 143, 185);
+    /* background: url(../images/soap.jpg); */
+}
+
+/* ***************************************************************************** */
+/* This is the middle container - it contains the search div and the button div  */
+/* ***************************************************************************** */
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 100px; 
+    grid-template-areas:
+    "search-div search-div"
+    "button-div button-div";
+
+}
+
+/* ***************************************************************************** */
+/* This is the search div - it contains the form that has the search bar and     */
+/* submit button                                                                 */
+/* ***************************************************************************** */
+
+.srch-div {
+    justify-self: center;
+    align-self: end;
+    grid-area: search-div;
+
+}
+
+.srch-div__form__input {
+    width: 700px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 24pt;
+    background-color: rgb(219, 255, 213); 
+
+}
+
+.srch-div__form__input::placeholder {
+    opacity: 0.2;
+    text-align: center;
+}
+
+.srch-div__form__input--whitebg:focus {
+    background-color:white;
+}
+
+.srch-div__form__input:focus::placeholder {
+    color: transparent;
+}
+
+.srch-div__form__button {
+    height: 40px;
+    border-radius: 10px;
+    border: 0px;
+    position: relative;
+    top: -7px;
+    left: -75px;
+    background-color: rgb(190, 190, 190);
+    font-size: 12pt;
+}
+
+.srch-div__form__button--bluebg:hover {
+    background-color: rgb(40, 161, 231);
+    cursor: pointer;
+}
+
+/* ***************************************************************************** */
+/* This is the button div - it contains the two buttons, add recipe and see      */
+/* all recipes                                                                   */
+/* ***************************************************************************** */
+
+.btn-div {
+    justify-self: center;
+    align-self: center;
+    grid-area: button-div;
+}
+
+.btn-div__btn {
+    height: 50px;
+    font-size: 18pt;
+    font-family: Georgia, Verdana, sans-serif;
+    border: 1px solid black;
+    position: relative;
+    left: 10px;
+}
+
+.btn-div__btn--cyanbg:hover {
+    background-color: lightcyan;
+    cursor: pointer;
+}
+
+/* ***************************************************************************** */
+/* This is the suggest div - it contains the pop up box that shows suggestions   */
+/* ***************************************************************************** */
+
+.suggest-div {
+    position: relative;
+    justify-self: start;
+    align-self: start;
+    grid-area: button-div;
+    border: 1px solid black;
+    z-index:  1;
+    background-color: white;
+    width: 702px;
+    display: none;
+}
+
+.suggest-div--show{
+    display: block; 
+}
