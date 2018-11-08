@@ -2,6 +2,7 @@
 /* This is the document body - it is set up to be a grid parent or container     */
 /* All divs within the body are grid children or items                           */
 /* ***************************************************************************** */
+
 body {
     display: grid;
     grid-template-columns: 1fr;
