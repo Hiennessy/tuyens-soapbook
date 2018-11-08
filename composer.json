@@ -3,5 +3,8 @@
     "require": {
         "alrik11es/cowsayphp": "^1.2",
         "monolog/monolog": "^1.22"
+    },
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "*"
     }
 }
