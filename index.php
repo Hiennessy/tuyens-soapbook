@@ -19,7 +19,7 @@
     <div class="container">
         <!-- ********** Search Div  ***********  -->
         <div class="srch-div">
-            <form class="srch-div__form" id="srch-frm" action="functions/functions.php" method="post" autocomplete="off">
+            <form class="srch-div__form" id="srch-frm" action="pages/construction.php" method="post" autocomplete="off">
                 <input class="srch-div__form__input srch-div__form__input--whitebg" type="text" name="search" id="srch-input" placeholder="enter soap name to search">
                 <button class="srch-div__form__button srch-div__form__button--bluebg" id="srch-btn">submit</button>
             </form>
